@@ -12,8 +12,6 @@
   },
   "license": "MIT",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "dev": "next dev"
   },

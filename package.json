@@ -13,11 +13,14 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watchALL"
+    "test:watch": "jest --watchALL",
+    "services:up": "docker compose -f infra/compose.yaml up -d",
+    "services:stop": "docker compose -f infra/compose.yaml stop",
+    "services:down": "docker compose -f infra/compose.yaml down"
   },
   "dependencies": {
     "next": "^13.1.6",
